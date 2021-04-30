@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './register.dart';
+import './home_page.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -72,8 +73,8 @@ class _LoginState extends State<Login> {
               borderRadius: BorderRadius.circular(20)),
           child: FlatButton(
             onPressed: () {
-              // Navigator.push(
-              //     context, MaterialPageRoute(builder: (_) => HomePage()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => HomePage()));
             },
             child: Text(
               'Login',

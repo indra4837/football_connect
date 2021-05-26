@@ -1,4 +1,4 @@
-name: football_connect
+name: FootballConnect
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
   google_fonts: ^2.0.0
   carousel_slider: ^3.0.0
+  flutter_launcher_icons: ^0.9.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -34,6 +35,11 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo/app_logo.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -47,10 +53,11 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/football_connect_logo.png
+    - assets/images/FootballConnect_logo.png
     - assets/images/kallang_cage.jpg
     - assets/images/kovan_cage.jpg
     - assets/images/oth_stadium.jpg
+    - assets/images/pasir_ris_court.jpg
     - google_fonts/
 
   # An image asset can refer to one or more resolution-specific "variants", see

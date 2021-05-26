@@ -1,4 +1,4 @@
-# football_connect
+# FootballConnect
 
 Connecting everyone to the beautiful game.
 

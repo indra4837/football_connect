@@ -17,7 +17,7 @@ class Register extends StatelessWidget {
                 borderRadius: BorderRadius.circular(200),
               ),
               child: Center(
-                child: Image.asset('assets/images/football_connect_logo.png'),
+                child: Image.asset('assets/images/FootballConnect_logo.png'),
               ),
             ),
             SizedBox(

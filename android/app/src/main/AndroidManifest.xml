@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.football_connect">
+    package="com.example.FootballConnect">
    <application
-        android:label="football_connect"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Football Connect"
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

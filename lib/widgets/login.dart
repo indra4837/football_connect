@@ -22,7 +22,7 @@ class _LoginState extends State<Login> {
             borderRadius: BorderRadius.circular(200),
           ),
           child: Center(
-            child: Image.asset('assets/images/football_connect_logo.png'),
+            child: Image.asset('assets/images/FootballConnect_logo.png'),
           ),
         ),
         SizedBox(
@@ -74,7 +74,7 @@ class _LoginState extends State<Login> {
           child: FlatButton(
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => HomePage()));
+                  context, MaterialPageRoute(builder: (_) => HomePageWidget()));
             },
             child: Text(
               'Login',

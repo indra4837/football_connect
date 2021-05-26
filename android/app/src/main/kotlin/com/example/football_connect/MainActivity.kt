@@ -1,4 +1,4 @@
-package com.example.football_connect
+package com.example.FootballConnect
 
 import io.flutter.embedding.android.FlutterActivity
 

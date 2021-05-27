@@ -26,6 +26,7 @@ dependencies:
   google_fonts: ^2.0.0
   carousel_slider: ^3.0.0
   flutter_launcher_icons: ^0.9.0
+  carousel_pro: ^1.0.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -58,6 +59,8 @@ flutter:
     - assets/images/kovan_cage.jpg
     - assets/images/oth_stadium.jpg
     - assets/images/pasir_ris_court.jpg
+    - assets/images/jalan_besar_stadium.jpg
+    - assets/images/jurong_jc_stadium.jpg
     - google_fonts/
 
   # An image asset can refer to one or more resolution-specific "variants", see

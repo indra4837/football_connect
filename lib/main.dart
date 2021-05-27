@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import './models/themeColor.dart';
-import './widgets/login.dart';
+import './pages/login_page.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+import '../models/auth.dart';
+
+import '../pages/home_page.dart';
 
 class Register extends StatelessWidget {
+  final nameController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  var authHandler = new Auth();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,6 +44,7 @@ class Register extends StatelessWidget {
                           BorderSide(color: Theme.of(context).primaryColor)),
                   labelText: 'Full Name',
                 ),
+                controller: nameController,
               ),
             ),
             Padding(
@@ -47,6 +58,7 @@ class Register extends StatelessWidget {
                           BorderSide(color: Theme.of(context).primaryColor)),
                   labelText: 'Email',
                 ),
+                controller: emailController,
               ),
             ),
             Padding(
@@ -55,11 +67,13 @@ class Register extends StatelessWidget {
               child: TextField(
                 obscureText: true,
                 decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(color: Theme.of(context).primaryColor)),
-                    labelText: 'Password',
-                    hintText: 'Enter secure password'),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide:
+                          BorderSide(color: Theme.of(context).primaryColor)),
+                  labelText: 'Password',
+                  hintText: 'Enter secure password',
+                ),
+                controller: passwordController,
               ),
             ),
             SizedBox(
@@ -73,6 +87,19 @@ class Register extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20)),
               child: FlatButton(
                 onPressed: () {
+                  authHandler
+                      .handleSignUp(
+                          emailController.text, passwordController.text)
+                      .then(
+                    (User user) {
+                      Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                          builder: (context) => new HomePageWidget(),
+                        ),
+                      );
+                    },
+                  ).catchError((e) => print(e));
                   // Navigator.push(
                   //     context, MaterialPageRoute(builder: (_) => HomePage()));
                 },

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-import 'register_page.dart';
-import 'home_page.dart';
+import '../pages/register_page.dart';
+import '../pages/home_page.dart';
+
+import '../models/auth.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -9,6 +12,12 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  FirebaseAuth auth = FirebaseAuth.instance;
+  final passwordController = TextEditingController();
+  final emailController = TextEditingController();
+  bool wrongPassword = false;
+  var authHandler = new Auth();
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,11 +43,13 @@ class _LoginState extends State<Login> {
           // padding: EdgeInsets.symmetric(horizontal: 15),
           child: TextField(
             decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                    borderSide:
-                        BorderSide(color: Theme.of(context).primaryColor)),
-                labelText: 'Email',
-                hintText: 'abc@gmail.com'),
+              enabledBorder: OutlineInputBorder(
+                  borderSide:
+                      BorderSide(color: Theme.of(context).primaryColor)),
+              labelText: 'Email',
+              hintText: 'abc@gmail.com',
+            ),
+            controller: emailController,
           ),
         ),
         Padding(
@@ -48,11 +59,13 @@ class _LoginState extends State<Login> {
           child: TextField(
             obscureText: true,
             decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                    borderSide:
-                        BorderSide(color: Theme.of(context).primaryColor)),
-                labelText: 'Password',
-                hintText: 'Enter secure password'),
+              enabledBorder: OutlineInputBorder(
+                  borderSide:
+                      BorderSide(color: Theme.of(context).primaryColor)),
+              labelText: 'Password',
+              hintText: 'Enter secure password',
+            ),
+            controller: passwordController,
           ),
         ),
         FlatButton(
@@ -73,8 +86,21 @@ class _LoginState extends State<Login> {
               borderRadius: BorderRadius.circular(20)),
           child: FlatButton(
             onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => HomePageWidget()));
+              authHandler
+                  .handleSignInEmail(
+                      emailController.text, passwordController.text)
+                  .then(
+                (User user) {
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (context) => new HomePageWidget(),
+                    ),
+                  );
+                },
+              ).catchError((e) => print(e));
+              // Navigator.push(
+              //     context, MaterialPageRoute(builder: (_) => HomePageWidget()));
             },
             child: Text(
               'Login',

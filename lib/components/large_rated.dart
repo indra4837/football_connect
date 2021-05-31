@@ -74,7 +74,7 @@ class LargeIcon extends StatelessWidget {
                             alignment: Alignment(0, 0),
                             child: Container(
                               width: MediaQuery.of(context).size.width,
-                              height: MediaQuery.of(context).size.height * 0.04,
+                              height: MediaQuery.of(context).size.height * 0.03,
                               constraints: BoxConstraints(
                                 maxWidth: MediaQuery.of(context).size.width,
                                 maxHeight: 72,
@@ -113,7 +113,7 @@ class LargeIcon extends StatelessWidget {
                     padding: EdgeInsets.fromLTRB(0, 10, 10, 0),
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.15,
-                      height: 50,
+                      height: MediaQuery.of(context).size.height * 0.04,
                       child: Stack(
                         children: [
                           Align(
@@ -155,7 +155,7 @@ class LargeIcon extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(5, 100, 0, 0),
+                padding: EdgeInsets.fromLTRB(10, 110, 0, 0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,

@@ -18,4 +18,8 @@ class Auth {
 
     return user;
   }
+
+  Future<void> handlePasswordResetEmail(email) async {
+    return await auth.sendPasswordResetEmail(email: email);
+  }
 }

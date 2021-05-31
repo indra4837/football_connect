@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../models/auth.dart';
 
 import '../pages/home_page.dart';
+import '../pages/login_page.dart';
 
 class Register extends StatelessWidget {
   final nameController = TextEditingController();
@@ -17,8 +18,11 @@ class Register extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.1,
+            ),
             Container(
               // height: 100.0,
               // width: 190.0,
@@ -31,7 +35,7 @@ class Register extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 0,
+              height: MediaQuery.of(context).size.height * 0.1,
             ),
             Padding(
               padding: const EdgeInsets.only(
@@ -108,6 +112,29 @@ class Register extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
               ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.2,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Already have an account?',
+                  style: TextStyle(color: Theme.of(context).primaryColor),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text(
+                    'Login',
+                    style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        color: Theme.of(context).primaryColor),
+                  ),
+                )
+              ],
             ),
           ],
         ),

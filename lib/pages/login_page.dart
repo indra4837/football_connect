@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import '../pages/register_page.dart';
 import '../pages/home_page.dart';
+import '../pages/forgot_password_page.dart';
 
 import '../models/auth.dart';
 
@@ -21,8 +22,11 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.1,
+        ),
         Container(
           // height: 100.0,
           // width: 190.0,
@@ -35,7 +39,7 @@ class _LoginState extends State<Login> {
           ),
         ),
         SizedBox(
-          height: 50,
+          height: MediaQuery.of(context).size.height * 0.1,
         ),
         Padding(
           padding: const EdgeInsets.only(
@@ -70,7 +74,8 @@ class _LoginState extends State<Login> {
         ),
         FlatButton(
           onPressed: () {
-            // TODO FORGOT PASSWORD SCREEN GOES HERE
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => ForgotPassword()));
           },
           child: Text(
             'Forgot Password',
@@ -109,7 +114,7 @@ class _LoginState extends State<Login> {
           ),
         ),
         SizedBox(
-          height: 130,
+          height: MediaQuery.of(context).size.height * 0.2,
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,

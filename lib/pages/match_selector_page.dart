@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../components/header_logo.dart';
+import '../components/header_logo_back.dart';
 import '../components/large_rated.dart';
 import '../components/match_line.dart';
 
@@ -39,7 +39,7 @@ class _MatchSelectorPageWidgetState extends State<MatchSelectorPageWidget> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              HeaderLogo(),
+              HeaderLogoBack(),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),

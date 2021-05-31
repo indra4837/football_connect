@@ -71,14 +71,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ),
                             Align(
                               alignment: Alignment(0.14, 0.05),
-                              child: Text(
-                                'All',
-                                textAlign: TextAlign.start,
-                                style: GoogleFonts.alegreyaSans(
-                                  textStyle: TextStyle(
-                                    color: Color(0xFF5B7D76),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
+                              child: TextButton(
+                                onPressed: () {},
+                                child: Text(
+                                  'All',
+                                  textAlign: TextAlign.start,
+                                  style: GoogleFonts.alegreyaSans(
+                                    textStyle: TextStyle(
+                                      color: Color(0xFF5B7D76),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -90,15 +93,18 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     Align(
                       alignment: Alignment(0.14, 0.05),
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(40, 0, 0, 0),
-                        child: Text(
-                          'Courts',
-                          textAlign: TextAlign.start,
-                          style: GoogleFonts.alegreyaSans(
-                            textStyle: TextStyle(
-                              color: Color(0xFF666462),
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
+                        padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Courts',
+                            textAlign: TextAlign.start,
+                            style: GoogleFonts.alegreyaSans(
+                              textStyle: TextStyle(
+                                color: Color(0xFF666462),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),
@@ -107,15 +113,18 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     Align(
                       alignment: Alignment(0.14, 0.05),
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(40, 0, 0, 0),
-                        child: Text(
-                          'Pitch',
-                          textAlign: TextAlign.start,
-                          style: GoogleFonts.alegreyaSans(
-                            textStyle: TextStyle(
-                              color: Color(0xFF666462),
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
+                        padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Pitch',
+                            textAlign: TextAlign.start,
+                            style: GoogleFonts.alegreyaSans(
+                              textStyle: TextStyle(
+                                color: Color(0xFF666462),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),
@@ -124,15 +133,18 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     Align(
                       alignment: Alignment(0.14, 0.05),
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(40, 0, 0, 0),
-                        child: Text(
-                          'Match',
-                          textAlign: TextAlign.start,
-                          style: GoogleFonts.alegreyaSans(
-                            textStyle: TextStyle(
-                              color: Color(0xFF666462),
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
+                        padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Match',
+                            textAlign: TextAlign.start,
+                            style: GoogleFonts.alegreyaSans(
+                              textStyle: TextStyle(
+                                color: Color(0xFF666462),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),
@@ -141,15 +153,18 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     Align(
                       alignment: Alignment(0.14, 0.05),
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(40, 0, 0, 0),
-                        child: Text(
-                          'Futsal',
-                          textAlign: TextAlign.start,
-                          style: GoogleFonts.alegreyaSans(
-                            textStyle: TextStyle(
-                              color: Color(0xFF666462),
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
+                        padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Futsal',
+                            textAlign: TextAlign.start,
+                            style: GoogleFonts.alegreyaSans(
+                              textStyle: TextStyle(
+                                color: Color(0xFF666462),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),

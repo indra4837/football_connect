@@ -1,8 +1,9 @@
-import 'package:FootballConnect/components/large_rated.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+
+import '../components/large_rated.dart';
+
+import '../models/get_image_url.dart';
 
 class CarouselPage extends StatelessWidget {
   @override
@@ -25,19 +26,20 @@ class CarouselPage extends StatelessWidget {
         indicatorBgPadding: 7.0,
         images: [
           LargeIcon(
-            'assets/images/oth_stadium.jpg',
+            getImageURL('oth_stadium.jpg'),
+            // 'assets/images/oth_stadium.jpg',
             'Tampines',
             '4.1',
             'Full Field Match',
           ),
           LargeIcon(
-            'assets/images/jurong_jc_stadium.jpg',
+            getImageURL('jurong_jc_stadium.jpg'),
             'Jurong',
             '3.5',
             'Full Field Match',
           ),
           LargeIcon(
-            'assets/images/jalan_besar_stadium.jpg',
+            getImageURL('jalan_besar_stadium.jpg'),
             'Jalan Besar',
             '4.5',
             'Full Field Match',

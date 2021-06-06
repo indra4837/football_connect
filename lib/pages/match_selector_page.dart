@@ -7,7 +7,7 @@ import '../components/large_rated.dart';
 import '../components/match_line.dart';
 
 class MatchSelectorPageWidget extends StatefulWidget {
-  final String imagePath;
+  final Future<String> imagePath;
   final String location;
   final String rating;
   final String courtName;

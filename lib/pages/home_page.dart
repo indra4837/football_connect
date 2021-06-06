@@ -1,14 +1,11 @@
-import 'package:FootballConnect/components/small_features.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../pages/match_selector_page.dart';
-
-import '../widgets/carousel_slider.dart';
 
 import '../components/image_carousel.dart';
 import '../components/header_logo.dart';
+import '../components/small_features.dart';
+
+import '../models/get_image_url.dart';
 
 class HomePageWidget extends StatefulWidget {
   HomePageWidget({Key key}) : super(key: key);
@@ -19,6 +16,9 @@ class HomePageWidget extends StatefulWidget {
 
 class _HomePageWidgetState extends State<HomePageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  // final FirebaseStorage storage = FirebaseStorage.instanceFor(
+  //     app: FirebaseFirestore.instance.app,
+  //     bucket: 'gs://football-connect-94b47.appshot.com');
 
   @override
   Widget build(BuildContext context) {
@@ -231,21 +231,23 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     SmallFeatures(
-                      'assets/images/kallang_cage.jpg',
+                      // 'assets/images/kallang_cage.jpg',
+                      getImageURL('kallang_cage.jpg'),
                       '4.1',
                       'Kallang Cage',
                       '12 mins',
                       'Kallang',
                     ),
                     SmallFeatures(
-                      'assets/images/kovan_cage.jpg',
+                      // 'assets/images/kovan_cage.jpg',
+                      getImageURL('kovan_cage.jpg'),
                       '3.9',
                       'Kovan Cage',
                       '5 mins',
                       'Kovan',
                     ),
                     SmallFeatures(
-                      'assets/images/pasir_ris_court.jpg',
+                      getImageURL('pasir_ris_court.jpg'),
                       '4.3',
                       'Pasir Ris Court',
                       '20 mins',

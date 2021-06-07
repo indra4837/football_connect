@@ -56,15 +56,6 @@ class SmallFeatures extends StatelessWidget {
                                             courtName: courtName,
                                           )));
                             },
-                            // child: imagePath != null
-                            //     ? CachedNetworkImage(
-                            //         imageUrl: imagePath,
-                            //         placeholder: (context, url) =>
-                            //             CircularProgressIndicator(),
-                            //         errorWidget: (context, url, error) =>
-                            //             Icon(Icons.error),
-                            //       )
-                            //     : CircularProgressIndicator(),
                             child: CachedNetworkImage(
                               imageUrl: image.data,
                               imageBuilder: (context, imageProvider) =>
@@ -82,15 +73,6 @@ class SmallFeatures extends StatelessWidget {
                                 Icons.error,
                               ), //// YOU CAN CREATE YOUR OWN ERROR WIDGET HERE
                             ),
-                            // child: image.hasData
-                            //     ? Image.network(
-                            //         image.data,
-                            //         width: MediaQuery.of(context).size.width,
-                            //         height:
-                            //             MediaQuery.of(context).size.height * 1,
-                            //         fit: BoxFit.cover,
-                            //       )
-                            //     : image.error.toString(),
                           ),
                         ),
                         Align(

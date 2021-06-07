@@ -16,9 +16,30 @@ class HomePageWidget extends StatefulWidget {
 
 class _HomePageWidgetState extends State<HomePageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  // final FirebaseStorage storage = FirebaseStorage.instanceFor(
-  //     app: FirebaseFirestore.instance.app,
-  //     bucket: 'gs://football-connect-94b47.appshot.com');
+
+  var smallIcons = {
+    {
+      'image': 'kallang_cage.jpg',
+      'rating': '4.1',
+      'courtName': 'Kallang Cage',
+      'time': '12 mins',
+      'location': 'Kallang'
+    },
+    {
+      'image': 'kovan_cage.jpg',
+      'rating': '3.9',
+      'courtName': 'Kovan Cage',
+      'time': '5 mins',
+      'location': 'Kovan'
+    },
+    {
+      'image': 'pasir_ris_court.jpg',
+      'rating': '4.3',
+      'courtName': 'Pasir Ris Court',
+      'time': '20 mins',
+      'location': 'Pasir Ris'
+    },
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -229,31 +250,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
-                  children: [
-                    SmallFeatures(
-                      // 'assets/images/kallang_cage.jpg',
-                      getImageURL('kallang_cage.jpg'),
-                      '4.1',
-                      'Kallang Cage',
-                      '12 mins',
-                      'Kallang',
-                    ),
-                    SmallFeatures(
-                      // 'assets/images/kovan_cage.jpg',
-                      getImageURL('kovan_cage.jpg'),
-                      '3.9',
-                      'Kovan Cage',
-                      '5 mins',
-                      'Kovan',
-                    ),
-                    SmallFeatures(
-                      getImageURL('pasir_ris_court.jpg'),
-                      '4.3',
-                      'Pasir Ris Court',
-                      '20 mins',
-                      'Pasir Ris',
-                    ),
-                  ],
+                  children: smallIcons
+                      .map(
+                        (entry) => SmallFeatures(
+                          getImageURL(entry['image']),
+                          entry['rating'],
+                          entry['courtName'],
+                          entry['time'],
+                          entry['location'],
+                        ),
+                      )
+                      .toList(),
                 ),
               )
             ],

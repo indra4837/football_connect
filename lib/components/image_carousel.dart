@@ -6,6 +6,27 @@ import '../components/large_rated.dart';
 import '../models/get_image_url.dart';
 
 class CarouselPage extends StatelessWidget {
+  var carouselIcons = {
+    {
+      'image': 'oth_stadium.jpg',
+      'location': 'Tampines',
+      'rating': '4.1',
+      'matchType': 'Full Field Match'
+    },
+    {
+      'image': 'jurong_jc_stadium.jpg',
+      'location': 'Jurong',
+      'rating': '3.5',
+      'matchType': 'Full Field Match'
+    },
+    {
+      'image': 'jalan_besar_stadium.jpg',
+      'location': 'Jalan Besar',
+      'rating': '4.4',
+      'matchType': 'Full Field Match'
+    },
+  };
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -24,27 +45,16 @@ class CarouselPage extends StatelessWidget {
         dotVerticalPadding: 10.0,
         showIndicator: true,
         indicatorBgPadding: 7.0,
-        images: [
-          LargeIcon(
-            getImageURL('oth_stadium.jpg'),
-            // 'assets/images/oth_stadium.jpg',
-            'Tampines',
-            '4.1',
-            'Full Field Match',
-          ),
-          LargeIcon(
-            getImageURL('jurong_jc_stadium.jpg'),
-            'Jurong',
-            '3.5',
-            'Full Field Match',
-          ),
-          LargeIcon(
-            getImageURL('jalan_besar_stadium.jpg'),
-            'Jalan Besar',
-            '4.5',
-            'Full Field Match',
-          ),
-        ],
+        images: carouselIcons
+            .map(
+              (entry) => LargeIcon(
+                getImageURL(entry['image']),
+                entry['location'],
+                entry['rating'],
+                entry['matchType'],
+              ),
+            )
+            .toList(),
       ),
     );
   }

@@ -41,14 +41,6 @@ class LargeIcon extends StatelessWidget {
                                   courtName: courtName,
                                 )));
                   },
-                  // child: image.hasData
-                  //     ? Image.network(
-                  //         image.data,
-                  //         width: MediaQuery.of(context).size.width,
-                  //         height: MediaQuery.of(context).size.height * 1,
-                  //         fit: BoxFit.fill,
-                  //       )
-                  //     : image.error.toString(),
                   child: CachedNetworkImage(
                     imageUrl: image.data,
                     imageBuilder: (context, imageProvider) => Container(

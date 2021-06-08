@@ -1,3 +1,4 @@
+import 'package:FootballConnect/pages/search_page.dart';
 import 'package:flutter/material.dart';
 
 class HeaderLogoBack extends StatelessWidget {
@@ -43,7 +44,12 @@ class HeaderLogoBack extends StatelessWidget {
                   padding: EdgeInsets.fromLTRB(0, 0, 5, 0),
                   child: IconButton(
                     onPressed: () {
-                      print('SearchButton pressed ...');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => SearchPageWidget(),
+                        ),
+                      );
                     },
                     icon: Icon(
                       Icons.search,

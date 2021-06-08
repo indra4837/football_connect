@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../pages/search_page.dart';
+
 class HeaderLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,12 @@ class HeaderLogo extends StatelessWidget {
                   padding: EdgeInsets.fromLTRB(0, 0, 5, 0),
                   child: IconButton(
                     onPressed: () {
-                      print('SearchButton pressed ...');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => SearchPageWidget(),
+                        ),
+                      );
                     },
                     icon: Icon(
                       Icons.search,

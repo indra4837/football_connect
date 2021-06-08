@@ -47,14 +47,16 @@ class SmallFeatures extends StatelessWidget {
                           child: GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (_) => MatchSelectorPageWidget(
-                                            imagePath: imagePath,
-                                            location: location,
-                                            rating: rating,
-                                            courtName: courtName,
-                                          )));
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => MatchSelectorPageWidget(
+                                    imagePath: imagePath,
+                                    location: location,
+                                    rating: rating,
+                                    courtName: courtName,
+                                  ),
+                                ),
+                              );
                             },
                             child: CachedNetworkImage(
                               imageUrl: image.data,

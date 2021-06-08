@@ -11,19 +11,19 @@ class CarouselPage extends StatelessWidget {
       'image': 'oth_stadium.jpg',
       'location': 'Tampines',
       'rating': '4.1',
-      'matchType': 'Full Field Match'
+      'stadium': 'OTH Stadium'
     },
     {
       'image': 'jurong_jc_stadium.jpg',
       'location': 'Jurong',
       'rating': '3.5',
-      'matchType': 'Full Field Match'
+      'stadium': 'Jurong JC Stadium'
     },
     {
       'image': 'jalan_besar_stadium.jpg',
       'location': 'Jalan Besar',
       'rating': '4.4',
-      'matchType': 'Full Field Match'
+      'stadium': 'Jalan Besar Stadium'
     },
   };
 
@@ -51,7 +51,7 @@ class CarouselPage extends StatelessWidget {
                 getImageURL(entry['image']),
                 entry['location'],
                 entry['rating'],
-                entry['matchType'],
+                entry['stadium'],
               ),
             )
             .toList(),

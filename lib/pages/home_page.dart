@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../components/image_carousel.dart';
-import '../components/header_logo.dart';
 import '../components/small_features.dart';
 
 import '../models/get_image_url.dart';
+
+import '../pages/search_page.dart';
 
 class HomePageWidget extends StatefulWidget {
   HomePageWidget({Key key}) : super(key: key);
@@ -46,6 +48,66 @@ class _HomePageWidgetState extends State<HomePageWidget> {
     return WillPopScope(
       onWillPop: () async => false,
       child: Scaffold(
+        appBar: AppBar(
+          toolbarHeight: MediaQuery.of(context).size.height * 0.07,
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.white,
+          elevation: 0,
+          centerTitle: false,
+          titleSpacing: 0,
+          actions: [
+            Builder(
+              builder: (context) => IconButton(
+                onPressed: () => Scaffold.of(context).openDrawer(),
+                icon: SvgPicture.asset(
+                  'assets/images/drawer.svg',
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(35, 0, 0, 0),
+              child: Image.asset(
+                'assets/images/FootballConnect_logo.png',
+                width: MediaQuery.of(context).size.width * 0.6,
+                height: MediaQuery.of(context).size.height * 0.2,
+                fit: BoxFit.fitWidth,
+              ),
+            ),
+            Expanded(
+              child: Align(
+                alignment: Alignment(1, 0),
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(0, 0, 5, 0),
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => SearchPageWidget(),
+                        ),
+                      );
+                    },
+                    icon: Icon(
+                      Icons.search,
+                      color: Colors.black,
+                      size: 30,
+                    ),
+                    iconSize: 30,
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
+        drawer: Container(
+          child: Drawer(
+            child: Center(
+              child: Text(
+                'user profile stuff here',
+              ),
+            ),
+          ),
+        ),
         key: scaffoldKey,
         backgroundColor: Colors.white,
         body: SafeArea(
@@ -54,10 +116,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                HeaderLogo(),
+                // HeaderLogo(),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.15,
+                  height: MediaQuery.of(context).size.height * 0.1,
                   constraints: BoxConstraints(
                     maxWidth: MediaQuery.of(context).size.width,
                     maxHeight: 100,

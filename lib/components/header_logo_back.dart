@@ -29,7 +29,7 @@ class HeaderLogoBack extends StatelessWidget {
               iconSize: 30,
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(35, 10, 0, 0),
+              padding: EdgeInsets.fromLTRB(38, 10, 0, 0),
               child: Image.asset(
                 'assets/images/FootballConnect_logo.png',
                 width: MediaQuery.of(context).size.width * 0.6,
